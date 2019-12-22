@@ -1,0 +1,9 @@
+.side-bar{
+    width: 100%;
+    display: flex;
+    flex-flow: column wrap;
+    margin-top: rem(70);
+    @media (min-width: $smDesktopWidth){
+        width: 31.95%;
+    }
+}

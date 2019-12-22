@@ -1,0 +1,15 @@
+.footer{
+    background-color: $default-color;
+    &__logo{
+        display: flex;
+        justify-content: center;
+        padding: rem(64) 0 rem(44) 0;
+    }
+    &__social{
+        margin-bottom: rem(32);
+    }
+    &__copyright{
+        margin-bottom: rem(32);
+        padding: 0 15px;
+    }
+}

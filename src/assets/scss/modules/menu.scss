@@ -1,0 +1,34 @@
+.menu{
+    overflow: hidden;
+    &__con{
+        display: flex;
+        flex-flow: row wrap;
+        justify-content: space-between;
+        align-items: center;
+        margin: 0 rem(-25);
+        position: relative;
+        &_add-elem{
+            &:before{
+                content: '';
+                background-color: $mainFontColor;
+                height: 1px;
+                width: 20px;
+                position: absolute;
+                left: rem(-25);
+                top: auto;
+            }
+        }
+    }
+    &__item{
+        padding: 0 rem(25);
+    }
+    &__link{
+        font-weight: 700;
+        color: $bg-text-news;
+        text-transform: uppercase;
+        transition: 0.5s;
+        &_active, &:hover{
+            color: $mainFontColor;
+        }
+    }
+}

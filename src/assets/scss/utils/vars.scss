@@ -1,14 +1,14 @@
 // Font
-$mainFont                : 'SF Pro Text';
+$mainFont                : 'Roboto';
 
 // Size
 $mainFontColor           : #000000; 
-$mainFontSize            : 17px;
-$mainFontWeight          : 300;
-$mainLineHeight          : 1.9411;
+$mainFontSize            : 14px;
+$mainFontWeight          : 400;
+$mainLineHeight          : 1.4;
 
 $lgdesktopWidth          : 1400px;
-$desktopWidth            : 1200px;
+$desktopWidth            : 1174px;
 $smDesktopWidth          : 992px;
 $tableWidth              : 768px;
 $phoneWidth              : 575px;
@@ -35,15 +35,15 @@ $border-lighter          : #EBEEF5;
 $border-lightex          : #F2F6FC;
 
 //skins-color
-$verv-title: #333333;
-$verv-main: #EE334B;
-$verv-light: #FFFFFF;
-$verv-line-f: #FF568D;
-$verv-line-s: #F51E47;
-$verv-close: #D1D1D6;
-
-//skins-w
-$iphoneXh             : 812px;
-$iphone6p             : 414px;
-$iphone6              : 375px;
-$iphone5              : 320px;
+$bg-back-gr: #fafafa;
+$bg-light-text: #CCCCCC;
+$bg-title: #333333;
+$bg-text-news: #777777;
+$bg-text-hover: #E5E5E5;
+$bg-load: #959595;
+$bg-inp: #B7B7B7;
+$bg-inp-ic: #999999;
+$bg-add-info: #EBEBEB;
+$bg-resent-p-t: #3D3D3D;
+$bg-tag: #9C9C9C;
+$bg-tag-bord: #EEEEEE;

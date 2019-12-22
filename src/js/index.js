@@ -1,24 +1,34 @@
-let vh = window.innerHeight * 0.01;
-document.documentElement.style.setProperty('--vh', `${vh}px`);
-
-const container = document.querySelector('.custom-scroll__line');
-const content = document.querySelector('.custom-scroll');
-const scroll = document.querySelector('.custom-scroll__line-tracker');
-const adv = document.querySelector('.adv');
-const heightLineTracker = adv.clientHeight / content.scrollHeight * 100;
-scroll.style.height = `${heightLineTracker}%`;
-
-scroll.addEventListener('mousedown', function(start){
-  start.preventDefault();
-  var y = scroll.offsetTop;
-  var onMove = function(end){
-    var delta = end.pageY - start.pageY;
-    let somePx = Math.min(container.clientHeight - scroll.clientHeight, Math.max(0, y + delta)) + 'px';
-    scroll.style.top = somePx;
-    content.style.transform = 'translateY(-'+ (somePx) +')';
-  };
-  document.addEventListener('mousemove', onMove);
-  document.addEventListener('mouseup', function(){
-    document.removeEventListener('mousemove', onMove);
-  });
+function masonry(){
+    if(window.innerWidth >= 768){
+        const masCon = document.querySelector('.news-grid');
+        const masElem = masCon.querySelectorAll('.news-grid__card');
+        const howMuchElems = masElem.length;
+        let sumHeightLeft = [];
+        let sumHeightright = [];
+        masElem.forEach(function(item, i){
+            if(i < howMuchElems/2){
+                sumHeightLeft.push(item.offsetHeight);
+                item.style.marginRight = "4%";
+            }else{
+                sumHeightright.push(item.offsetHeight);
+            }
+        });
+        let allLeft = sumHeightLeft.reduce(function(sum, current) {
+            return sum + current;
+        }, 0);
+        let allRight = sumHeightright.reduce(function(sum, current) {
+            return sum + current;
+        }, 0);
+        if( allLeft > allRight ){
+            masCon.style.height = allLeft + 35 + 'px';
+        }else{
+            masCon.style.height = allRight + 35 + 'px';
+        }
+    }else{
+        document.querySelector('.news-grid').style.height = 'auto';
+    }
+}
+document.addEventListener("DOMContentLoaded", () => {
+    masonry();
+    window.addEventListener('resize', masonry);
 });

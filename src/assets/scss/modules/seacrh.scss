@@ -1,0 +1,28 @@
+.seacrh{
+    position: relative;
+    display: flex;
+    align-items: center;
+    &_m-b{
+        &_26{
+            margin-bottom: rem(26);
+        }
+    }
+    &__inp{
+        width: 100%;
+        padding: rem(20) rem(28);
+        @include placeholder{
+            font-size: rem(16);
+            font-style: italic;
+            color: $bg-inp;
+        }
+    }
+    &__but{
+        position: absolute;
+        right: 12px;
+        top: auto;
+        background-color: $bg-inp-ic;
+        @include size(34px);
+        color: $default-color;
+        border-radius: 2px;
+    }
+}

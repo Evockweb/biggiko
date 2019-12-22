@@ -1,0 +1,14 @@
+.copyright{
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: center;
+    align-items: center;
+    &__text{
+        font-size: rem(13);
+        color: $bg-tag;
+        text-align: center;
+    }
+    &__name{
+        color: $mainFontColor;
+    }
+}

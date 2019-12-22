@@ -9,21 +9,15 @@ html {
 	font-size: $mainFontSize;
   color: $mainFontColor;
   font-weight: $mainFontWeight;
-  height: 100%;
-  /*@media screen and (max-width: $desktopWidth) {
-		font-size: 16px;
+  min-height: 100vh;
+  @media screen and (max-width: $desktopWidth) {
+		font-size: 14px;
   }
   @media screen and (max-width: $tableWidth) {
-		font-size: 15px;
+		font-size: 14px;
   }
   @media screen and (max-width: $phoneWidth) {
 		font-size: 14px;
-  }*/
-  @media screen and (max-width: $iphone6) {
-    font-size: 17px;
-  }
-  @media screen and (max-width: $iphone5) {
-    font-size: 16px;
   }
 }
 
@@ -31,11 +25,18 @@ body{
   font-family: $mainFont;
 	-webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  overflow: hidden;
+  min-height: 100vh;
+  display: flex;
+  flex-flow: column wrap;
+  background-color: $bg-back-gr;
 }
+
 button{
   font-family: $mainFont;
+  padding: 0;
+  background-color: transparent;
 }
+
 .container{
   width: 100%;
   position: relative;
@@ -43,23 +44,28 @@ button{
   max-width: 100%;
   padding: 0px 15px;
   @media screen and (min-width: $smDesktopWidth) {
-    max-width: $tableWidth;
+    max-width: $smDesktopWidth;
   }
   @media screen and (min-width: $desktopWidth) {
-    max-width: $smDesktopWidth;
+    max-width: $desktopWidth;
   }
   @media screen and (min-width: $lgdesktopWidth) {
     max-width: $desktopWidth;
   }
 }
-section{
-  max-width: 414px;
-  width: 100%;
-  margin: 0 auto;
-}
 // Modules
 @import "modules/header.scss";
-@import "modules/adv.scss";
-@import "modules/text-adv-info.scss";
-@import "modules/text-hide.scss";
-@import "modules/custom-scroll.scss";
+@import "modules/logo.scss";
+@import "modules/menu.scss";
+@import "modules/banner.scss";
+@import "modules/news-con.scss";
+@import "modules/news-grid.scss";
+@import "modules/side-bar.scss";
+@import "modules/load-more.scss";
+@import "modules/seacrh.scss";
+@import "modules/add-info.scss";
+@import "modules/resent-post.scss";
+@import "modules/tag.scss";
+@import "modules/footer.scss";
+@import "modules/social.scss";
+@import "modules/copyright.scss";

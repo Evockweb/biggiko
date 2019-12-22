@@ -1,0 +1,41 @@
+.resent-post{
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+    padding-bottom: rem(23);
+    width: 100%;
+    &:last-child{
+        padding-bottom: 0;
+    }
+    &__img-con{
+        width: 90px;
+        height: 65px;
+    }
+    &__img{
+        @include size(100%);
+        object-fit: cover;
+        object-position: center;
+        display: block;
+    }
+    &__info{
+        display: flex;
+        width: calc(100% - 90px);
+        flex-flow: column wrap;
+        justify-content: space-between;
+        padding-left: rem(17);
+    }
+    &__title{
+        font-size: rem(16);
+        font-weight: 500;
+        color: $bg-resent-p-t;
+        max-height: 44.8px;
+        overflow: hidden;
+        text-overflow: ellipsis;
+    }
+    &__date{
+        font-size: rem(13);
+        font-weight: 300;
+        color: $bg-text-news;
+        line-height: 1;
+    }
+}

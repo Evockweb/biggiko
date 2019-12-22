@@ -1,0 +1,33 @@
+.header{
+    position: relative;
+    &_bc-clr{
+        &_def{
+            background-color: $default-color;
+        }
+    }
+    &__container{
+        display: flex;
+        flex-flow: row wrap;
+        justify-content: space-between;
+        align-items: center;
+    }
+    &__logo{
+        flex-grow: 0.5;
+        margin-left: auto;
+        &_p-t{
+            &_28{
+                padding-top: rem(28);
+            }
+        }
+        &_p-b{
+            &_28{
+                padding-bottom: rem(28);
+            }
+        }
+    }
+    &__menu{
+        flex-grow: 0.5;
+        display: flex;
+        justify-content: flex-end;
+    }
+}

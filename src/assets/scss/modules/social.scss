@@ -1,0 +1,23 @@
+.social{
+    border-top: 1px solid $bg-add-info;
+    border-bottom: 1px solid $bg-add-info;
+    padding: rem(22) 0;
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    &__list{
+        display: flex;
+        flex-flow: row wrap;
+        justify-content: space-between;
+        align-items: center;
+        margin: 0 rem(-13);
+    }
+    &__item{
+        padding: 0 rem(28);
+    }
+    &__link{
+        color: $bg-text-news;
+    }
+}
