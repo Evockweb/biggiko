@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="60" height="60" viewBox="0 0 60 60">
+  <g id="Play" transform="translate(-769 -1187)">
+    <circle id="base" cx="30" cy="30" r="30" transform="translate(769 1187)" fill="#1a1a1a" opacity="0.502"/>
+    <path id="play-2" data-name="play" d="M792,1209l16,8h0l-16,8Z" fill="#e7e7e7"/>
+  </g>
+</svg>
